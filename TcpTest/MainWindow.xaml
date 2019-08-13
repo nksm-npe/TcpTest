@@ -1,0 +1,32 @@
+﻿<Window x:Class="TcpTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TcpTest"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Height="419" VerticalAlignment="Bottom">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="52*"/>
+            <ColumnDefinition Width="21*"/>
+            <ColumnDefinition Width="59*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="152*"/>
+            <RowDefinition Height="62*"/>
+            <RowDefinition Height="205*"/>
+        </Grid.RowDefinitions>
+        <Border BorderBrush="AntiqueWhite" BorderThickness="10" Padding="10" Background="red" Grid.RowSpan="1" Grid.Row="1" Grid.ColumnSpan="1" Grid.Column="1">
+            <TextBox x:Name="textBox"  Text="MsgFromClient" Grid.RowSpan="1" Grid.ColumnSpan="1"  Margin="0,0,0,0"/>
+        </Border>
+        <Button x:Name="Connect" Content="Connect" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="36,23,0,0" Click="btn_Connect_Click" Grid.Row="1" Height="20"/>
+        <Button x:Name="Send" Content="Send" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="140,24,0,0" Click="btnSend_Click" Grid.Row="1" Height="20"/>
+        <Button x:Name="Close" Content="Close" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="45,24,0,0" Click="btnClose_Click" Grid.Row="1" Grid.Column="2" Height="20"/>
+        <Button x:Name="ServerStart" Content="Button" HorizontalAlignment="Left" Margin="35,68,0,0" VerticalAlignment="Top" Width="75" Click="ServerStart_Click" Grid.Row="2" Height="20"/>
+        <Button x:Name="SSend" Content="Send(server)" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="140,68,0,0" Click="SSend_Click" Grid.Row="2" Height="20"/>
+        <TextBox x:Name="stextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="101,69,0,0" Grid.Row="2"/>
+        <TextBox x:Name="portnum" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="60001" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>
